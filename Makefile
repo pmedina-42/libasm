@@ -2,7 +2,9 @@ SRC_BASE	=	./code/
 SRCS		=   ft_strlen.s \
 				ft_strcpy.s \
 				ft_strcmp.s \
-				ft_strdup.s
+				ft_strdup.s \
+				ft_write.s 	\
+				ft_read.s
 
 SRCS 		:=	$(addprefix $(SRC_BASE), $(SRCS))
 OBJS		=	$(SRCS:.s=.o)
@@ -30,9 +32,8 @@ fclean: clean
 		@$(RM) $(NAME) $(EXEC)
 		clear
 
-compile:
+cc:
 	@$(CC) $(SRC_BASE)main.c $(NAME) -o $(EXEC)
-	@$(RM) $(NAME)
 
-execute:
-	@./$(EXEC)
+exe:
+	@./$(EXEC) 
