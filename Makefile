@@ -36,4 +36,5 @@ cc:
 	@$(CC) $(SRC_BASE)main.c $(NAME) -o $(EXEC)
 
 exe:
-	@./$(EXEC) 
+	clear
+	@./$(EXEC)
