@@ -13,12 +13,15 @@ int ft_read(int fildes, void *buf, size_t nbyte);
 int	main(void)
 {
 	char	s[] = "Hola buenas";
-	char	ls[] = "Hola buenasHola buenasHola buenasHola buenasHola buenasHola buenasHola buenasHola buenasHola buenasHola buenasHola buenasHola buenasHola buenas";
+	char	ls[] = "/l4KlhDg6JMI+djNN5JaciFYYLhif2ymwHCtaZFxM9ZS7N4/sAmQlVeW2qjhzmGJLXdN4ZKg7tJwUAZaTbW1xuawhXJtEezXAPbINVre30g3F1E99HNg/+WnQJrAqR1mC1elI47JLnXFgVPU1yLEvLsAW2N4K2SRoxmmB4oFsni+uyBdYME2Efjb2qgdQwdSMc0SXusQfZ35r6eJB+JuvkPR6bbvb1MQjBrQNlF+URCqlwShyQ3cv0NdluIH0kVKfuUslseUCpA/QPMhclFTk8xmxaFmnUrUg9vA4AtKchzEzU9z7/9kDwJKvN/BIP0lYjNaqg4FL6dI6xZZt";
 	char	es[] = " ";
 	char *mem;
 	char *i;
 	int j;
 	int fd;
+	char *aux;
+	char *aux2;
+
 
 	printf("\n\t\033[0;33m- [*] LIBASM TEST [*] -\033[0m\n\n");
 
@@ -46,7 +49,7 @@ int	main(void)
 
 	(ft_strcpy(ls, s) == strcpy(ls, s)) ? printf(" \033[0;32m[OK]\033[0m") : printf(" \033[0;31m[KO]\033[0m");
 	(ft_strcpy(s, ls) == strcpy(s, ls)) ? printf("\033[0;32m[OK]\033[0m") : printf("\033[0;31m[KO]\033[0m");
-	printf("\033[0;32m[420]\033[0m\n\n");
+	printf("\033[0;32m[42]\033[0m\n\n");
 
 	//printf("\033[0;36m-[Ft_strcpy]\033[0m\n\n");
 
@@ -73,18 +76,24 @@ int	main(void)
 	printf("  \033[0;35m[*] Strdup [*]\033[0m \033[0;36m---->\033[0m");
 
 	/*printf("\033[0;36m-[Ft_strdup]\033[0m\n\n");
-	printf("'%s' = %s\n", s, ft_strdup(s));
-	printf("'%s' = %s\n", ls, ft_strdup(ls));
-	printf("'%s' = %s\n", es, ft_strdup(es));
+	printf("'%s' = '%s'\n", s, ft_strdup(s));
+	printf("'%s' = '%s'\n", s, strdup(s));
+	//printf("'%s' = '%s'\n", ls, ft_strdup(ls));
+	//printf("'%s' = '%s'\n", es, ft_strdup(es));
 
 	printf("\033[0;36m-[Strdup]\033[0m\n\n");
-	printf("'%s' = %s\n", s, strdup(s));
-	printf("'%s' = %s\n", ls, strdup(ls));
-	printf("'%s' = %s\n", es, strdup(es));*/
+	printf("'%s' = '%s'\n", s, strdup(s));
+	printf("'%s' = '%s'\n", ls, strdup(ls));
+	printf("'%s' = '%s'\n", es, strdup(es));*/
 
-	(ft_strdup(s) == strdup(s)) ? printf(" \033[0;32m[OK]\033[0m") : printf(" \033[0;31m[ok]\033[0m");
-	(ft_strdup(ls) == strdup(ls)) ? printf("\033[0;32m[OK]\033[0m") : printf("\033[0;31m[ok]\033[0m");
-	(ft_strdup(es) == strdup(es)) ? printf("\033[0;32m[OK]\033[0m\n\n") : printf("\033[0;31m[ok]\033[0m\n\n");
+	//aux = strdup(s);
+	//aux2= ft_strdup(s);
+
+	//(aux[0] == aux2[0]) ? printf(" \033[0;32m[OK]\033[0m") : printf(" \033[0;31m[ok]\033[0m");
+
+	(strcmp(ft_strdup(s), strdup(s)) == 0) ? printf(" \033[0;32m[OK]\033[0m") : printf(" \033[0;31m[KO]\033[0m");
+	(strcmp(ft_strdup(ls), strdup(ls)) == 0) ? printf("\033[0;32m[OK]\033[0m") : printf("\033[0;31m[KO]\033[0m");
+	(strcmp(ft_strdup(es), strdup(es)) == 0) ? printf("\033[0;32m[OK]\033[0m\n\n") : printf("\033[0;31m[KO]\033[0m\n\n");
 	
 	// WRITE TEST
 	printf("  \033[0;35m[*]  Write [*]\033[0m \033[0;36m---->\033[0m");
