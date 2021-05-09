@@ -20,7 +20,7 @@ _ft_strdup:
 
 error:
 	call ___error
-	return
+	jmp return
 
 return:
 	ret 
